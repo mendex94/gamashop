@@ -7,9 +7,10 @@ interface UserTableProps {
     users: Users[],
     onClick: () => void,
     onDelete: (id: number) => void
+    onEdit: ()=> void
 }
 
-const UserTable: React.FC<UserTableProps> = ({users, onClick, onDelete}) => {
+const UserTable: React.FC<UserTableProps> = ({users, onClick, onDelete, onEdit}) => {
   return (
     <Container fluid="sm" style={{marginTop: 25}}>
     <div className='d-flex flex-row justify-content-between pb-3'>
@@ -41,7 +42,7 @@ const UserTable: React.FC<UserTableProps> = ({users, onClick, onDelete}) => {
                 <Button type='button'
                         variant='primary'
                         style={{marginRight: 5}}
-                        onClick={() => {}}>
+                        onClick={onEdit}>
                             <BsPenFill size={18}/>
                         </Button>
                 <Button type='button'

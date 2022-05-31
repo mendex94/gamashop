@@ -1,24 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Modal, Form, Button } from 'react-bootstrap'
 import { useFormik } from 'formik'
 import { Users } from '../types';
+import { renderUser } from '../api';
 
 interface ModalEditUserProps {
     show: boolean
     onHide: ()=> void
     editUser: (users: Omit<Users, 'id'>) => void
-    user: Users
 }
 
 
-const ModalEditUser: React.FC<ModalEditUserProps> = ({show, onHide, editUser, user}) => {
+const ModalEditUser: React.FC<ModalEditUserProps> = ({show, onHide, editUser}) => {
+    const [user, setUser] = useState<Users>({} as Users)
+    useEffect(() => {
+        renderUser(1).then(user => setUser(user))
+      }, [])
+      const handleEditUser = async (id: number) => {
+        const user = await renderUser(id)
+        setUser(
+          oldUser => user
+        )
+      }
+    const { nome, cpf, endereco, email, telefone } = user
+    console.log(nome)
     const formik = useFormik({
         initialValues: {
-          nome: user.nome,
-          cpf: user.cpf,
-          endereco: user.endereco,
-          email: user.email,
-          telefone: user.telefone
+          nome: nome,
+          cpf: cpf,
+          endereco: endereco,
+          email: email,
+          telefone: telefone
         },
         onSubmit: values => {
           editUser({
