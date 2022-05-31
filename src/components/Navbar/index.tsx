@@ -1,6 +1,6 @@
-import React from 'react'
-import {Navbar, Container, Nav} from 'react-bootstrap'
-import * as Icon from 'react-bootstrap-icons'
+import React from 'react';
+import {Navbar, Container, Nav} from 'react-bootstrap';
+import * as Icon from 'react-bootstrap-icons';
 
 function UserNavbar() {
   return (
@@ -22,7 +22,7 @@ function UserNavbar() {
         </Container>
       </Navbar>
     </header>
-  )
-}
+  );
+};
 
-export default UserNavbar
+export default UserNavbar;

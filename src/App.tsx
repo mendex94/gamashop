@@ -1,4 +1,4 @@
-import UserNavbar from './components/UserNavbar'
+import UserNavbar from './components/Navbar'
 
 
 function App() {
@@ -9,4 +9,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
