@@ -17,6 +17,6 @@ export const deleteUser = async (id: number): Promise<void> => {
     await api.delete(`/users/${id}`)
 }
 
-export const editUser = async (user: Users): Promise<void> => {
-    await api.put<Users>(`/users/${user.id}`, user).then(response => response.data)
+export const editUser = (user: Users): Promise<Users> => {
+    return api.put<Users>(`/users/${user.id}`, user).then(response => response.data)
 }

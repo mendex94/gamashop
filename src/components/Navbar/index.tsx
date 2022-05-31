@@ -1,5 +1,5 @@
 import React from 'react';
-import {Navbar, Container, Nav} from 'react-bootstrap';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 import * as Icon from 'react-bootstrap-icons';
 
 function UserNavbar() {
@@ -8,10 +8,10 @@ function UserNavbar() {
       <Navbar bg='light' expand='lg'>
         <Container>
           <Navbar.Brand href='#home' color='light'>
-            <Icon.Cart4/>
+            <Icon.Cart4 />
             Gamashop
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls='basic-navbar-nav'/>
+          <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse className='me-auto'>
             <Nav.Link href='#home'>Home</Nav.Link>
             <Nav.Link href='#usuarios'>Usuarios</Nav.Link>

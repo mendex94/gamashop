@@ -7,9 +7,8 @@ import UserTable from './components/UserTable'
 
 
 function App() {
-
   const [userList, setUsers] = useState<Users[]>([] as Users[])
-  
+
   useEffect(() => {
     renderUsers().then(users => setUsers(users))
   }, [])
@@ -18,7 +17,7 @@ function App() {
     const newUser = await createUser(user)
     setUsers(
       oldUserList => [...oldUserList, newUser]
-      )
+    )
   }
 
   const handleEditUser = async (user: Users) => {
@@ -37,7 +36,7 @@ function App() {
   const handleOpenCreateUserModal = () => {
     setUserCreateModal(true)
   }
-  
+
   const handleCloseCreateUserModal = () => {
     setUserCreateModal(false)
   }
@@ -45,12 +44,12 @@ function App() {
   return (
     <div className="App">
       <UserNavbar />
-      <UserTable 
+      <UserTable
         users={userList}
         onClick={handleOpenCreateUserModal}
-        onDelete={handleDeleteUser}  
+        onDelete={handleDeleteUser}
       />
-      <ModalCreateUser 
+      <ModalCreateUser
         show={userCreateModal}
         createUser={handleCreateUser}
         onHide={handleCloseCreateUserModal}
