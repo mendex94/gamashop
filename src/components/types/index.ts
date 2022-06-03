@@ -1,10 +1,10 @@
 export interface Users {
-   id: number,
-   nome: string,
-   cpf: string,
-   endereco: string,
-   email: string,
-   telefone: string 
+    id: number,
+    nome: string,
+    cpf: string,
+    endereco: string,
+    email: string,
+    telefone: string
 }
 
 export interface Fornecedores {
@@ -26,6 +26,7 @@ export interface Entregas {
 }
 
 export interface Produtos {
+    id: number,
     nome: string,
     descricao: string,
     preco: number,

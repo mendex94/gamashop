@@ -1,12 +1,12 @@
 {
   "users": [
     {
-      "id": 1,
       "nome": "Luiz Felipe Couto Mendes",
-      "cpf": "425.355.898-42",
-      "endereco": "Rua Antolin Garcia, 466",
-      "email": "lfelipecmendes@icloud.com",
-      "telefone": "959883728"
+      "cpf": 42535589842,
+      "endereco": "Rua Antolin García",
+      "email": "lfelipecmendes@gmail.com",
+      "telefone": "11959883728",
+      "id": 1
     }
   ],
   "fornecedores": [
