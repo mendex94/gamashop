@@ -18,7 +18,7 @@ function UserNavbar() {
               <Link className='nav-link' to='/'>Home</Link>
             </Nav.Link>
             <Nav.Link>
-              <Link className='nav-link' to='/usuarios'>Usuarios</Link>
+              <Link className='nav-link' to='/'>Usuarios</Link>
             </Nav.Link>
             <Nav.Link>
               <Link className='nav-link' to='/fornecedores'>Fornecedores</Link>
