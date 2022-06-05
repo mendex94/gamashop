@@ -50,7 +50,7 @@ const ModalCreateFornecedor: React.FC<ModalCreateFornecedorProps> = ({ show, onH
 
           <Form.Group className="mb-5">
             <Form.Label for='cnpj'>CNPJ</Form.Label>
-            <Form.Control name='cnpj' id="cnpj" type="number" placeholder="CNPJ do Fornecedor (apenas números)" value={formik.values.cnpj} onChange={formik.handleChange} />
+            <Form.Control name='cnpj' id="cnpj" type="text" placeholder="Ex.: 00.000.000/0000-00" value={formik.values.cnpj} onChange={formik.handleChange} />
           </Form.Group>
 
           <Form.Group className="mb-5">
