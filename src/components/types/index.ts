@@ -5,16 +5,16 @@ export interface Users {
     endereco: string,
     email: string,
     telefone: string
-}
+};
 
-export interface Fornecedores {
+export interface Fornecedor {
     id: number,
     razaoSocial: string,
     cnpj: string,
     endereco: string,
     email: string,
     telefone: string
-}
+};
 
 export interface Entregas {
     id: number,

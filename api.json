@@ -1,22 +1,22 @@
 {
   "users": [
     {
+      "id": 1,
       "nome": "Luiz Felipe Couto Mendes",
       "cpf": 42535589842,
       "endereco": "Rua Antolin García",
       "email": "lfelipecmendes@gmail.com",
-      "telefone": "11959883728",
-      "id": 1
+      "telefone": "11959883728"
     }
   ],
   "fornecedores": [
     {
-      "id": 1,
       "razaoSocial": "Gamashop",
       "cnpj": "31.584.480/0001-09",
       "endereco": "R. Cap. Antônio Rosa, 376",
       "email": "gamaacademy@gama.com",
-      "telefone": "32301769"
+      "telefone": "32301768",
+      "id": 1
     }
   ],
   "entregas": [

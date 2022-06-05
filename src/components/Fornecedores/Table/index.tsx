@@ -1,29 +1,29 @@
 import { Button, Container, Table } from 'react-bootstrap';
 import { BsTrashFill, BsPenFill } from 'react-icons/bs';
-import { Users } from '../types';
+import { Fornecedor } from '../../types';
 
-interface UserTableProps {
-  users: Users[],
+interface FornecedoresTableProps {
+  fornecedores: Fornecedor[],
   onClick: () => void,
   onDelete: (id: number) => void
-  onClickEdit: (user: Users) => void
+  onClickEdit: (fornecedor: Fornecedor) => void
 };
 
-const UserTable: React.FC<UserTableProps> = ({ users, onClick, onDelete, onClickEdit }) => {
+const FornecedoresTable: React.FC<FornecedoresTableProps> = ({ fornecedores, onClick, onDelete, onClickEdit }) => {
   return (
     <Container fluid="sm" style={{ marginTop: 25 }}>
       <div className='d-flex flex-row justify-content-between pb-3'>
-        <h1>Lista de usuarios</h1>
+        <h1>Lista de Fornecedores</h1>
         <Button variant="outline-success" onClick={onClick}>
-          Adicionar usuario
+          Adicionar Fornecedor
         </Button>
       </div>
       <Table striped borderless responsive hover variant="light">
         <thead>
           <tr>
             <th>#</th>
-            <th>Nome</th>
-            <th>CPF</th>
+            <th>Razão Social</th>
+            <th>CNPJ</th>
             <th>Endereço</th>
             <th>Email</th>
             <th>Telefone</th>
@@ -32,24 +32,24 @@ const UserTable: React.FC<UserTableProps> = ({ users, onClick, onDelete, onClick
         </thead>
 
         <tbody>
-          {users.map(user => (
-            <tr key={user.id}>
-              <td>{user.id}</td>
-              <td>{user.nome}</td>
-              <td>{user.cpf}</td>
-              <td>{user.endereco}</td>
-              <td>{user.email}</td>
-              <td>{user.telefone}</td>
+          {fornecedores.map(fornecedor => (
+            <tr key={fornecedor.id}>
+              <td>{fornecedor.id}</td>
+              <td>{fornecedor.razaoSocial}</td>
+              <td>{fornecedor.cnpj}</td>
+              <td>{fornecedor.endereco}</td>
+              <td>{fornecedor.email}</td>
+              <td>{fornecedor.telefone}</td>
               <td>
                 <Button type='button'
                   variant='primary'
                   style={{ marginRight: 5 }}
-                  onClick={() => onClickEdit(user)}>
+                  onClick={() => onClickEdit(fornecedor)}>
                   <BsPenFill size={18} />
                 </Button>
                 <Button type='button'
                   variant='danger'
-                  onClick={() => onDelete(user.id)}>
+                  onClick={() => onDelete(fornecedor.id)}>
                   <BsTrashFill size={18} />
                 </Button>
               </td>
@@ -61,4 +61,4 @@ const UserTable: React.FC<UserTableProps> = ({ users, onClick, onDelete, onClick
   );
 };
 
-export default UserTable;
+export default FornecedoresTable;

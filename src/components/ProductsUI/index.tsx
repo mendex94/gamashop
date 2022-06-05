@@ -1,18 +1,18 @@
-import productModal from '../hooks/ProductsHooks/productModal'
-import productRequests from '../hooks/ProductsHooks/productRequests'
-import AddProductsModal from './ProductsModal/AddProductsModal'
-import EditProductsModal from './ProductsModal/EditProductsModal'
-import UserNavbar from '../Navbar'
-import ProductsTable from './ProductsTable'
+import productModal from '../hooks/ProductsHooks/productModal';
+import productRequests from '../hooks/ProductsHooks/productRequests';
+import AddProductsModal from './ProductsModal/AddProductsModal';
+import EditProductsModal from './ProductsModal/EditProductsModal';
+import UserNavbar from '../Navbar';
+import ProductsTable from './ProductsTable';
 
 
-function App(): JSX.Element {
+function Products(): JSX.Element {
   const {
     productsList,
     handleAddProduct,
     handleUpdateProduct,
     handleDeleteProduct
-  } = productRequests()
+  } = productRequests();
 
   const {
     addProductModal,
@@ -21,7 +21,7 @@ function App(): JSX.Element {
     editProductModal,
     handleOpenEditProductModal,
     handleCloseEditProductModal
-  }  = productModal()
+  } = productModal();
 
   return (
     <div className="App">
@@ -43,7 +43,7 @@ function App(): JSX.Element {
         onHide={handleCloseEditProductModal}
       />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default Products;

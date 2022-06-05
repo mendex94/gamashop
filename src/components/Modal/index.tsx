@@ -6,7 +6,7 @@ import { useFormik } from 'formik';
 interface ModalCreateUserProps {
   show: boolean
   onHide: () => void
-  createUser: (users: Omit<Users, 'id'>) => void
+  createUser: (user: Omit<Users, 'id'>) => void
 }
 
 const ModalCreateUser: React.FC<ModalCreateUserProps> = ({ show, onHide, createUser }) => {
