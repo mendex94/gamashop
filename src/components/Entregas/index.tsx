@@ -8,9 +8,9 @@ import ModalEditEntrega from './EditModal';
 const Entregas: React.FC = () => {
   const {
     entregas,
-    handleCreateEntrega,
-    handleUpdateEntrega,
-    handleDeleteEntrega
+    handleCreateEntregas,
+    handleUpdateEntregas,
+    handleDeleteEntregas
   } = EntregasRequests();
 
   const {
@@ -28,17 +28,17 @@ const Entregas: React.FC = () => {
       <EntregasTable
         Entregas={entregas}
         onClick={ handleOpenCreateEntregasModal}
-        onDelete={handleDeleteEntrega}
+        onDelete={handleDeleteEntregas}
         onClickEdit={handleOpenEditEntregasModal}
       />
       <ModalCreateEntrega
         show={entregasCreateModal}
-        createEntrega={handleCreateEntrega}
+        createEntrega={handleCreateEntregas}
         onHide={handleCloseCreateEntregasModal}
       />
       <ModalEditEntrega
         show={entregasEditModal}
-        updateEntrega={handleUpdateEntrega}
+        updateEntrega={handleUpdateEntregas}
         onHide={handleCloseEditEntregasModal}
       />
     </div>
