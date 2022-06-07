@@ -23,7 +23,7 @@ export interface Entregas {
     endereco: string,
     email: string,
     telefone: string
-}
+};
 
 export interface Produtos {
     id: number,

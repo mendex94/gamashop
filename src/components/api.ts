@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Users, Fornecedor } from './types';
+import { Users, Fornecedor, Entregas } from './types';
 
 const api = axios.create({
     baseURL: 'http://localhost:3333'
@@ -37,5 +37,24 @@ export const deleteFornecedor = async (id: number): Promise<void> => {
 
 export const updateFornecedor = async (id: number, fornecedor: Omit<Fornecedor, "id">): Promise<Fornecedor> => {
     const response = await api.put<Fornecedor>(`/fornecedores/${id}`, fornecedor);
+    return response.data;
+};
+
+export const renderEntregas = async (): Promise<Entregas[]> => {
+    const response = await api.get<Entregas[]>('/entregas');
+    return response.data;
+};
+
+export const createEntregas = async (entregas: Omit<Entregas, "id">): Promise<Entregas> => {
+    const response = await api.post<Entregas>('/entregas', entregas);
+    return response.data;
+};
+
+export const deleteEntregas = async (id: number): Promise<void> => {
+    await api.delete(`/entregas/${id}`);
+};
+
+export const updateEntregas = async (id: number, entregas: Omit<Entregas, "id">): Promise<Entregas> => {
+    const response = await api.put<Entregas>(`/entregas/${id}`, entregas);
     return response.data;
 };
